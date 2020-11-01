@@ -1,0 +1,13 @@
+/*
+Theme Name:         Starter
+Theme URI:          https://str.bkc-stage.com
+Description:        Starter WordPress Theme.
+Version:            1.0.0
+Author:             BKCreative
+Author URI:         https://bkcreative.co
+License: 			GNU General Public License v2 or later
+License URI: 		http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: 		starter
+*/
+
+@import url('assets/css/min/app.min.css');

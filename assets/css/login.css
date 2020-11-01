@@ -1,0 +1,90 @@
+body {
+    background-color: #FFFFFF;
+}
+
+h1 a {
+    background-image:url('../img/logo.png') !important;
+    margin-top: 120px !important;
+    background-size: 280px !important;
+    width: 280px !important;
+    height: 125px !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+#login {
+    padding-top: 5% !important;
+    width: 425px;
+}
+
+.login form {
+    border: none;
+    box-shadow:none;
+    background: transparent;
+}
+
+.login form .input,
+.login input[type=text] {
+    color: #000;
+    background: transparent;
+    border:0;
+    border-bottom: 1px solid #ccc;
+    box-shadow:none;
+    border-radius: 0;
+}
+
+input[type="submit"],
+.wp-core-ui .button-primary {
+    padding: 15px 40px;
+    background: #5c0b0c;
+    border: none;
+    border-radius: 2px;
+    box-shadow: none;
+    text-shadow: none;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+     -webkit-transition: all 0.25s ease;
+     -o-transition: all 0.25s ease;
+     -moz-transition: all 0.25s ease;
+     transition: all 0.25s ease;
+ }
+
+.wp-core-ui .button.button-large {
+    height: 40px;
+    line-height: 28px;
+    padding: 0 22px 2px;
+}
+
+input[type="submit"]:hover,
+.wp-core-ui .button-primary:hover {
+    background: #5c0b0c;
+}
+
+div#login {
+    padding-top: 3% !important;
+}
+
+input[type="text"]:active,
+input[type="text"]:focus,
+.login form .input:active,
+.login form .input:focus,
+input[type="password"]:active,
+input[type="password"]:focus {
+    border-color: #000;
+    box-shadow: none;
+}
+
+.login label {
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.85em;
+}
+
+.login #backtoblog a,
+.login #nav a {
+    color: #000;
+}

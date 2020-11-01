@@ -1,0 +1,48 @@
+$font-primary: 'Roboto', helvetica, arial, sans-serif;
+$font-secondary: 'Open Sans', helvetica, arial, sans-serif;
+
+:root {
+  font-size: 100%;
+}
+
+//Font colors
+$font-body: #333;
+
+// Brand Colors
+$color-a: #457CF2;
+$color-b: #8578F5;
+$color-c: #4CCFA6;
+$color-d: #2A4D96;
+$color-e: #E9E9E9;
+$color-f: #FFFFFF;
+$color-g: #d8eef9;
+
+// Basic Colors
+$white: #ffffff;
+$black: #000000;
+
+$body-background: $white;
+$body-font-color: $font_body;
+
+$global-width: rem-calc(1200);
+
+$breakpoints: (
+  small: 0,
+  medium: 768px,
+  large: 1024px,
+  xlarge: 1200px,
+  xxlarge: 1440px,
+);
+$breakpoint-classes: (small medium large);
+
+// 3. The Grid
+// -----------
+$grid-row-full: 100%;
+$grid-row-width: $global-width;
+$grid-column-count: 12;
+$grid-column-gutter: (
+  small: 20px,
+  medium: 30px,
+);
+$grid-column-align-edge: true;
+$block-grid-max: 8;

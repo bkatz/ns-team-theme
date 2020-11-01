@@ -1,0 +1,77 @@
+@import "../../node_modules/normalize.scss/normalize.scss";
+@import '../../node_modules/foundation-sites/scss/util/util';
+@import 'settings';
+@import '../../node_modules/foundation-sites/scss/foundation';
+@include foundation-flex-grid;
+// @include foundation-flex-classes;
+
+@import 'base/all';
+@import 'components/all';
+@import 'layout/all';
+@import 'pages/all';
+@import 'modules/all';
+
+
+
+
+
+/*
+* Foundation Flexbox
+* https://foundation.zurb.com/sites/docs/flexbox-mode.html
+*/
+
+/*
+*
+* @include flex-grid-row($behavior, $size, $columns, $base, $wrap, $gutters)
+* @include flex-grid-row(null,$grid-row-width,12);  // Creates flexbox container
+*
+* Creates a container for a flex grid row.
+* $behavior: Modifications to the default grid styles. nest indicates the row will be placed inside another row. collapse indicates that the columns inside this row will not have padding. nest collapse combines both behaviors.
+* $size: Maximum size of the row. Set to expand to make the row taking the full width
+* $columns: Number of columns to use for this row. If set to null (the default), the global column count will be used.
+* $base: Set to false to prevent basic styles from being output. Useful if you're calling this mixin on the same element twice, as it prevents duplicate CSS output.
+* $wrap: Set to false to have row wrapping behavior set to nowrap
+* $gutters:; Gutter map or single value to use when inverting margins, in case the row is nested. Responsive gutter settings by default.
+*/
+
+/*
+*
+* @include flex-grid-column($columns, $gutters);
+* @include flex-grid-column(12,0);
+*
+* Defines the flexbox column width.
+* $columns: Width of the column. Refer to the flex-grid-column() function to see possible values.
+* $gutters: Map or single value for gutters width. See the grid-column-gutter mixin.
+*/
+
+/*
+*
+* @include flex;
+*
+* Enables flexbox by adding display: flex to the element.
+*/
+
+/*
+*
+* @include flex-align-self(middle);
+*
+* Vertically align a single column within a flex row. Apply this mixin to a flex column.
+* Can be top, bottom, middle, or stretch. Or, set it to null (the default) to not set vertical alignment.
+*/
+
+/*
+*
+* @include flex-align($x, $y);
+*
+* Horizontally or vertically aligns the items within a flex container.
+* $x: Horizontal alignment to use. Can be left, right, center, justify, or spaced. Or, set it to null (the default) to not set horizontal alignment.
+* $y: Vertical alignment to use. Can be top, bottom, middle, or stretch. Or, set it to null (the default) to not set vertical alignment.;
+*/
+
+/*
+*
+* @include flex-order($order);
+*
+* Changes the source order of a flex child. Children with lower numbers appear first in the layout.
+* $order: Order number to apply.;
+*/

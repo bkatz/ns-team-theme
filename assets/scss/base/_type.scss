@@ -1,0 +1,119 @@
+html {
+	font: normal 400 1rem/1 $font-secondary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@include flex-grid-column(12,0);
+	color: $font-body;
+	margin: 1rem 0 0.5rem;
+
+	&.is-extra-small {
+		font-size: 0.8em;
+	} // &.is-extra-small
+
+	&.is-small {
+		font-size: 0.9em;
+	} // &.is-small
+
+	&.is-large {
+		font-size: 1.1em;
+	} // &.is-large
+
+	&.is-extra-large {
+		font-size: 1.2em;
+	} // &.is-extra-large
+
+}
+
+h1 {
+	font: 600 2.5rem/1.15 $font-primary;
+
+	@include breakpoint(small down) {
+		font-size: 2rem;
+	}
+
+}
+
+h2 {
+	font: 600 2rem/1.15 $font-primary;
+
+	@include breakpoint(small down) {
+		font-size: 1.5rem;
+	}
+
+}
+
+h3 {
+	font: 600 1.66rem/1.15 $font-primary;
+
+	@include breakpoint(small down) {
+		font-size: 1.33rem;
+	}
+
+}
+
+h4 {
+	font: 600 1.33rem/1.15 $font-primary;
+}
+
+h5 {
+	font: 600 1.15rem/1.15 $font-primary;
+}
+
+h6 {
+	font: 600 1rem/1.15 $font-primary;
+}
+
+ul,
+ol {
+	margin: 0;
+	padding: 1rem 0 0 2.25rem;
+
+	li {
+		font: 400 1.1rem/1.6 $font-secondary;
+		color: $font-body;
+
+		&.is-extra-small {
+		} // &.is-extra-small
+
+		&.is-small {
+		} // &.is-small
+
+		&.is-large {
+		} // &.is-large
+
+		&.is-extra-large {
+		} // &.is-extra-large
+
+	}
+	// li
+}
+
+p {
+	@include flex-grid-column(12,0);
+	font: 400 1.1rem/1.6 $font-secondary;
+	color: $font-body;
+	margin: 0 0 1rem 0;
+
+	&.is-extra-small {
+	} // &.is-extra-small
+
+	&.is-small {
+	} // &.is-small
+
+	&.is-large {
+	} // &.is-large
+
+	&.is-extra-large {
+	} // &.is-extra-large
+
+}
+
+a {
+	color: $color-a;
+}

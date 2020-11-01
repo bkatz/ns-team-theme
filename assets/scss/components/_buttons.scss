@@ -1,0 +1,155 @@
+.button {
+	background: $color-a;
+	border: 2px solid $color-a;
+	border-radius: 3px;
+	color: $white;
+	display: inline-block;
+	font: 500 1rem/0.9 $font-primary;
+	// letter-spacing: 0.0125rem;
+	opacity: 1;
+	padding: 0.75rem 1.5rem;
+	position: relative;
+	text-align: center;
+	transition: all 0.25s ease;
+
+	/*
+	* Button states
+	*/
+	&:hover {
+		background: lighten( $color-a, 4% );
+		border: 2px solid lighten( $color-a, 4% );
+	} //&:hover
+
+	&:active,
+	&:focus {
+	    outline: none;
+	} // &:active
+
+	/*
+	* Button Sizes
+	*/
+	&.button--tiny {
+		padding: 0.33rem 0.66rem;
+		font: 400 0.7rem/1 $font-primary;
+	}
+
+	&.button--small {
+		padding: 0.65rem 1.15rem;
+		font: 400 0.8rem/0.7 $font-primary;
+	}
+
+	&.button--big {
+		padding: 1.25rem 2.5rem;
+		font: 400 1.2rem/0.9 $font-primary;
+	}
+
+	/*
+	* Button Colors
+	*/
+	&.button--link {
+	    background-color: transparent;
+	    border-color: transparent;
+	    color: $color-a;
+
+	    &:hover {
+		    background-color: transparent;
+		    border-color: transparent;
+		    color: $color-a;
+	    }
+
+	} // &.button--link
+
+	&.button--white {
+		color: $color-a;
+		background: $white;
+		border-color: $color-f;
+	}
+
+	&.button--white.button--outline {
+		color: white;
+		border-color: $white;
+		background: transparent;
+	}
+
+	/*
+	* Button Shadows
+	*/
+	&.button--shadow {
+	    box-shadow: 0 10px 50px -30px rgba(0,0,0,.5), 0 20px 30px -20px rgba(0,0,0,.5);
+	}
+	// &.button--shadow
+
+	/*
+	* Button variations
+	*/
+	&.button--arrow {
+		background: transparent;
+		color: $color-a;
+		border: none;
+		display: inline-block;
+		font: 600 1.1rem/1.5 $font-primary;
+
+		&:hover {
+			box-shadow: none;
+			opacity: 0.7;
+
+			svg {
+			    transform: translate(0.5rem, 0.33rem);
+			} // evg
+		}
+
+		svg {
+		    width: 20px;
+		    height: auto;
+		    margin-left: 0.75rem;
+		    transition: all 0.25s ease;
+		    transform: translate(0, 0.3rem);
+		} // svg
+
+	} // .button--arrow
+
+	&.button--outline {
+		border: 2px solid $color-a;
+		color: $color-a;
+		background: transparent;
+
+		&:hover {
+			color: $white;
+			background: $color-a;
+		}
+	}
+
+}
+// .button
+
+
+
+
+
+.link {
+	color: $color-a;
+	font: 600 1rem/1.2 $font-primary;
+	letter-spacing: 0.0125rem;
+
+	&.link--arrow {
+
+		&:hover {
+			svg {
+			    transform: translate(0.5rem, 0.33rem);
+			} // svg
+		}
+
+		svg {
+		    width: 20px;
+		    height: auto;
+		    margin-left: 0.75rem;
+		    transition: all 0.25s ease;
+		    transform: translate(0, 0.3rem);
+		} // svg
+	} // &.link--arrow
+
+	&.link--underline {
+
+	} // &.link--underline
+
+}

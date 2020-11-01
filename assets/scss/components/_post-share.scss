@@ -1,0 +1,39 @@
+.post__share {
+	@include flex-grid-row(null,$grid-row-width,12);
+    margin: 0;
+    padding-top: 0.33rem;
+	align-item: flex-start;
+	height: auto;
+    width: 100%;
+
+    @include breakpoint(small down) {
+        @include flex-grid-column(12,0);
+    }
+
+    & > .post__share-link {
+    	@include flex-grid-column(12,0);
+    	margin-bottom: 0.75rem;
+
+        &:last-of-type {
+            @include breakpoint(small down) {
+                margin-right: 0;
+            }
+        }
+
+        @include breakpoint(small down) {
+            flex: none;
+            margin-right: 1rem;
+        }
+
+    } // & > a
+
+    svg {
+    	width: 30px;
+    	height: auto;
+    } // svg
+
+    img {
+
+    } // img
+
+} // .post__share

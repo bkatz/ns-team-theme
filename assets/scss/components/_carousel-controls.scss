@@ -1,0 +1,52 @@
+.carousel-controls {
+	position: absolute;
+	top: calc(50% - 20px);
+	display: block;
+	z-index: 101;
+	transition: all 0.3s ease;
+	cursor: pointer;
+
+	&.is-circle {
+		@extend .shadow--circle;
+		background: $white;
+		border-radius: 50%;
+		box-sizing: border-box;
+		padding: 0.5rem;
+		width: 66px;
+		height: 66px;
+		cursor: pointer;
+
+		.next,
+		.previous {
+		    width: 25px;
+		    height: 25px;
+		} // .next,
+	}
+
+	&.is-previous {
+		left: 1em;
+		.previous {
+		    left: calc(50% - 0.33rem);
+		} // .previous
+	}
+
+	&.is-next {
+		right: 1em;
+		.next {
+		    right: calc(50% - 0.33rem);
+		} // .previous
+	}
+
+	svg {
+		width: 40px;
+		height: auto;
+		stroke-width: 1px;
+
+		polyline {
+		    stroke: $color-f;
+		    stroke-width: 1px;
+		} // polyline
+	}
+
+}
+// END .carousel-controls
