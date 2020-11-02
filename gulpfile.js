@@ -12,8 +12,7 @@ var gulp          = require( 'gulp' ),
     include       = require( 'gulp-include' ),
     sass          = require( 'gulp-sass' ),
     autoprefixer  = require( 'gulp-autoprefixer' ),
-    babel         = require('gulp-babel'),
-    plumber       = require('gulp-plumber');
+    babel         = require( 'gulp-babel' ), 
 
 var onError = function( err ) {
   console.log( 'An error occurred:', err.message );
@@ -38,6 +37,8 @@ var PATHS = {
     'node_modules/slick-carousel/slick/slick.js', // Carousels/Sliders
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js', // Fancybox
     'node_modules/js-cookie/src/js.cookie.js', // Cookies
+    'node_modules/gsap/dist/gsap.min.js', // gsap
+    'node_modules/gsap/dist/ScrollTrigger.min.js', // gsap ScrollTrigger
 
     // Componenets
     'assets/js/components/menu.js',
@@ -45,6 +46,7 @@ var PATHS = {
     'assets/js/components/notifications.js',
     'assets/js/components/modals.js',
     'assets/js/components/animations.js',
+    'assets/js/components/gsap.js',
 
     // Modules
     // 'assets/js/modules/module-name.js' // Add module functionality here.
