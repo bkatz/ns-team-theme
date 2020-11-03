@@ -12,7 +12,8 @@ var gulp          = require( 'gulp' ),
     include       = require( 'gulp-include' ),
     sass          = require( 'gulp-sass' ),
     autoprefixer  = require( 'gulp-autoprefixer' ),
-    babel         = require( 'gulp-babel' ), 
+    babel         = require( 'gulp-babel' ),
+    sourcemaps    = require( 'gulp-sourcemaps' );
 
 var onError = function( err ) {
   console.log( 'An error occurred:', err.message );
@@ -62,11 +63,13 @@ var PATHS = {
 gulp.task( 'scss', function() {
     return gulp.src( 'assets/scss/app.scss' )
     .pipe( plumber( { errorHandler: onError } ) )
+    .pipe( sourcemaps.init() )
     .pipe( sass({ includePaths : PATHS.sass }) )
     .pipe( autoprefixer('last 3 version') )
     .pipe( gulp.dest( './assets/css/' ) )
     .pipe( cleanCSS({compatibility: 'ie10'}))
     .pipe( rename( { suffix: '.min' } ) )
+    .pipe( sourcemaps.write('.') )
     .pipe( gulp.dest( './assets/css/min/' ) )
     .pipe( livereload() );
 } );
