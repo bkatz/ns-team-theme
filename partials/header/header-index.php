@@ -9,7 +9,7 @@
  */
 
 $blog 				= get_page_by_path( 'blog' );
-$header_enable 		= get_post_meta( $blog->ID, 'header_enable', true );
+$header_enable 		= get_post_meta( $blog->ID, 'header_enable', true ); // Needs to be set up in ACF as an optional header.
 
 if ( is_home() || is_front_page() ) :
 

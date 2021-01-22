@@ -10,7 +10,7 @@
 
 // Header options data.
 $featured_image_url		= get_the_post_thumbnail_url( $post->ID, 'full' );
-$header_enable 			= get_post_meta( $post->ID, 'header_enable', true );
+$header_enable 			= get_post_meta( $post->ID, 'header_enable', true ); // Needs to be set up in ACF as an optional header.
 $header_title 			= get_post_meta( $post->ID, 'header_title', true );
 $header_subtitle 		= get_post_meta( $post->ID, 'header_subtitle', true );
 $header_title 			= ( ! empty( $header_title ) ) ? $header_title : get_the_title();
