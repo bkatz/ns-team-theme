@@ -1,4 +1,4 @@
-# Revshr WordPress Theme
+# SomeName WordPress Theme
 ## Getting Started
 ```bash
 $ cd my-wordpress-folder/wp-content/themes/this-theme
