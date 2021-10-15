@@ -1,4 +1,8 @@
 # SomeName WordPress Theme
+## Git
+$ cd my-wordpress-folder/wp-content/themes/
+$ git clone gitsshclone theme name
+
 ## Getting Started
 ```bash
 $ cd my-wordpress-folder/wp-content/themes/this-theme
