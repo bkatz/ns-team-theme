@@ -1,6 +1,7 @@
 var gulp          = require( 'gulp' ),
     plumber       = require( 'gulp-plumber' ),
     watch         = require( 'gulp-watch' ),
+    postcss       = require( 'gulp-postcss' ),
     livereload    = require( 'gulp-livereload' ),
     cleanCSS      = require( 'gulp-clean-css' ),
     concat        = require( 'gulp-concat' ),
@@ -11,7 +12,7 @@ var gulp          = require( 'gulp' ),
     notify        = require( 'gulp-notify' ),
     include       = require( 'gulp-include' ),
     sass          = require( 'gulp-sass')(require('sass')),
-    autoprefixer  = require( 'gulp-autoprefixer' ),
+    autoprefixer  = require( 'autoprefixer' ),
     babel         = require( 'gulp-babel' ),
     sourcemaps    = require( 'gulp-sourcemaps' );
 
@@ -60,19 +61,19 @@ var PATHS = {
   ]
 };
 
-gulp.task( 'scss', function() {
-    return gulp.src( 'assets/scss/app.scss' )
-    .pipe( plumber( { errorHandler: onError } ) )
-    .pipe( sourcemaps.init() )
-    .pipe( sass({ includePaths : PATHS.sass }) )
-    .pipe( autoprefixer('last 3 version') )
-    .pipe( gulp.dest( './assets/css/' ) )
-    .pipe( cleanCSS({compatibility: 'ie10'}))
-    .pipe( rename( { suffix: '.min' } ) )
-    .pipe( sourcemaps.write('.') )
-    .pipe( gulp.dest( './assets/css/min/' ) )
-    .pipe( livereload() );
-} );
+gulp.task('scss', function () {
+  return gulp.src('assets/scss/app.scss')
+    .pipe(plumber({ errorHandler: onError }))
+    .pipe(sourcemaps.init())
+    .pipe(sass({ includePaths: PATHS.sass }))
+    .pipe(postcss([autoprefixer({ grid: 'autoplace' })]))
+    .pipe(gulp.dest('./assets/css/'))
+    .pipe(cleanCSS({ compatibility: 'ie10' }))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./assets/css/min/'))
+    .pipe(livereload());
+});
 
 gulp.task( 'javascript', function() {
   return gulp.src(PATHS.javascript)
