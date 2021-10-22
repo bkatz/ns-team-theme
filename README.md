@@ -1,10 +1,15 @@
 # SomeName WordPress Theme
 ## Git
+```bash
 $ cd my-wordpress-folder/wp-content/themes/
-$ git clone gitsshclone theme-name
+$ git clone git@github.com:bkatz/starter.git
+$ cd starter
+$ git push --mirror git@github.com:bkatz/NEWREPOSITORYNAME.git
+$ cd ..
+$ rm -rf starter
+$ git clone git@github.com:bkatz/NEWREPOSITORYNAME.git
 $ git init
-$ git add .
-$ git commit
+```
 
 ## Getting Started
 ```bash
