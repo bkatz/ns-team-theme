@@ -43,7 +43,7 @@
 				<nav role="navigation" class="header__menu header__menu--bottom">
 					<?php wpst_main_menu(); ?>
 
-					<button class="menu-icon" type="button">
+					<button class="menu-icon" type="button" area-label="main menu">
 						<span></span>
 					</button>
 
