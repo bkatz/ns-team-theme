@@ -8,6 +8,7 @@ $ git push --mirror git@github.com:bkatz/NEWREPOSITORYNAME.git
 $ cd ..
 $ rm -rf starter
 $ git clone git@github.com:bkatz/NEWREPOSITORYNAME.git
+$ cd NEWTHEME
 $ git init
 ```
 
