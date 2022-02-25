@@ -14,11 +14,10 @@
 	<title><?php wp_title(); ?></title>
 
 	<!-- Get favicons here: https://realfavicongenerator.net/ -->
-
-	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo THEME_URL; ?>/assets/img/icons/apple-touch-icon-57x57.png" />
+	<?php /** use this echo as a path to the theme folder for favicons */ // echo THEME_URL; ?>
 	
 	<meta name="application-name" content="<?php echo get_bloginfo('name'); ?>" />
-	
+
 	<?php wp_head(); ?>
 
 	<?php
