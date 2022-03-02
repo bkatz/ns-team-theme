@@ -14,7 +14,8 @@ h1 a {
 
 #login {
     padding-top: 5% !important;
-    width: 425px;
+    width: 100%;
+    max-width: 425px;
 }
 
 .login form {
