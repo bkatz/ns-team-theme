@@ -47,11 +47,19 @@ The BEM approach ensures that everyone who participates in the development of a 
 
 #### Mixins
 ```
-@include flex-grid-row(null,$grid-row-width,12);  // Creates flexbox container
-@include flex-grid-column(12,0); // Creates a column (100%)
-@include flex-grid-column(6,0); // Creates a column (50%)
-@include flex-align-self(middle); // Align vertially center
-@include flex-align-self(top); // Align vertially top
+display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;  // Creates flexbox container
+width: 100%; // Creates a column (100%)
+flex: 0 0 50%;
+max-width: 50%;
+padding-right: 0;
+padding-left: 0; // Creates a column (50%)
+align-self: center; // Align vertially center
+align-self: start; // Align vertially top
 @include flex-align-self(bottom); // Align vertially bottom
 ```
 
@@ -63,16 +71,22 @@ Breakpoints should be defined inside of the element selector:
 } // .element
 
 .element__item {
-	@include flex-grid-column(6,0); // 6/12 (50%) width of 12 column container.
+	flex: 0 0 50%;
+max-width: 50%;
+padding-right: 0;
+padding-left: 0; // 6/12 (50%) width of 12 column container.
 
 	// $large - defined in _settings.scss
-	@include breakpoint(large down) {
-		@include flex-grid-column(9,0); // 9/12 column width of container.
+	@include breakpoint(large, down) {
+		flex: 0 0 75%;
+max-width: 75%;
+padding-right: 0;
+padding-left: 0; // 9/12 column width of container.
 	}
 
 	// $small - defined in _settings.scss
-	@include breakpoint(small down) {
-		@include flex-grid-column(12,0); // 12/12 columns (100%) width of container.
+	@include breakpoint(small, down) {
+		width: 100%; // 12/12 columns (100%) width of container.
 	}
 
 } // .element__item

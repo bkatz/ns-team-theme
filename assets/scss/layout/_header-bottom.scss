@@ -15,16 +15,22 @@ $show_menu: large;
                 align-items: flex-start;
                 width: 100%;
                 max-width: 100%;
-                height: calc(100vh - 0); // Adjust for .header__top height.
+                height: calc(100vh); // Adjust for .header__top height.
             }
 
 	    } // & > .container
 
 	    .header__logo {
-			@include flex-grid-column(2,0);
+			flex: 0 0 16.6666%;
+max-width: 16.6666%;
+padding-right: 0;
+padding-left: 0;
 
-			@include breakpoint(small down) {
-				@include flex-grid-column(7,0);
+			@include breakpoint(small, down) {
+				flex: 0 0 58.3333%;
+max-width: 58.3333%;
+padding-right: 0;
+padding-left: 0;
 			}
 
             // Mobile menu is active
@@ -33,7 +39,12 @@ $show_menu: large;
             }
 
 			a {
-				@include flex-grid-row(null,$grid-row-width,12);
+				display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
 				width: 100%;
 				height: 100%;
 
@@ -45,7 +56,7 @@ $show_menu: large;
 			}
 
 			img {
-				@include flex-align-self(middle);
+				align-self: center;
 				display: block;
 				width: auto;
 				max-width: 180px;
@@ -54,7 +65,7 @@ $show_menu: large;
 				margin: 0;
 				transition: all 0.5s ease;
 
-				@include breakpoint(small down) {
+				@include breakpoint(small, down) {
 					width: 100%;
 				}
 			}
@@ -62,19 +73,27 @@ $show_menu: large;
 	    } // .logo
 
 	    .header__menu {
-			@include flex-grid-column(10,0);
-			@include flex-align-self(middle);
+			flex: 0 0 83.3333%;
+max-width: 83.3333%;
+padding-right: 0;
+padding-left: 0;
+			align-self: center;
 
-            @include breakpoint($show_menu down) {
-                @include flex-grid-row(null,$grid-row-width,12);
-                @include flex-grid-column(12,0);
-                @include flex-align-self(top);
+            @include breakpoint($show_menu, down) {
+                display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
+                width: 100%;
+                align-self: start;
                 height: 100%;
             }
 
             // Mobile menu is active
             body.menu-is-open & {
-                @include flex-grid-column(12,0);
+                width: 100%;
                 height: calc(100% - 6rem);
             }
 
@@ -87,22 +106,27 @@ $show_menu: large;
     		margin: 0;
     		text-align: right;
 
-            @include breakpoint($show_menu down) {
-                @include flex-grid-column(12,0);
-                @include flex-align-self(middle);
+            @include breakpoint($show_menu, down) {
+                width: 100%;
+                align-self: center;
                 opacity: 0;
                 visibility: hidden;
                 z-index: -1000;
                 height: 0;
             }
 
-            @include breakpoint(small down) {
-                @include flex-align-self(top);
+            @include breakpoint(small, down) {
+                align-self: start;
             }
 
             // Mobile menu is active
             body.menu-is-open & {
-                @include flex-grid-row(null,$grid-row-width,12);
+                display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
                 max-height: none;
                 opacity: 1;
                 z-index: 99;
@@ -112,21 +136,21 @@ $show_menu: large;
 
             @for $i from 1 to 15 {
                 .menu-item:nth-child(#{$i}) {
-                    @include breakpoint(medium down) {
+                    @include breakpoint(medium, down) {
                         transition-delay: $i * 0.075s;
                     }
                 }
             }
 
     		.menu-item {
-    			@include flex-align-self(middle);
+    			align-self: center;
     			position: relative;
     			display: inline-block;
     			margin: 0 0.5em;
     			padding: 0;
     			text-align: right;
 
-                @include breakpoint($show_menu down) {
+                @include breakpoint($show_menu, down) {
                     opacity: 0;
                     transform: translateY(-1rem);
                     transition: opacity 0.75s ease, transform 0.75s ease;
@@ -134,7 +158,7 @@ $show_menu: large;
 
                 // Mobile menu is active
                 body.menu-is-open & {
-                    @include flex-grid-column(12,0);
+                    width: 100%;
                     text-align: left;
                     margin: 0;
                     padding: 0;
@@ -155,7 +179,7 @@ $show_menu: large;
                     }
 
 					.menu-item__description {
-					    @include flex-grid-column(12,0);
+					    width: 100%;
 					    display: block;
 					    font: 400 0.7rem/1 $font-secondary;
 					    letter-spacing: 0;
@@ -188,14 +212,14 @@ $show_menu: large;
     				padding: 0 0.25em;
     				transition: all 0.2s ease;
 
-                    @include breakpoint(small down) {
+                    @include breakpoint(small, down) {
                         font: 400 1.05rem/1.5 $font-secondary;
                     }
     			}
 
     			&.menu-item-has-children {
 
-                    @include breakpoint($show_menu up) {
+                    @include breakpoint($show_menu, up) {
                         transition: 0.5s ease;
                     }
 
@@ -224,8 +248,8 @@ $show_menu: large;
     					z-index: 1001;
     					transition: all 0.5s ease 0.1s;
 
-                        @include breakpoint($show_menu down) {
-                            @include flex-grid-column(12,0);
+                        @include breakpoint($show_menu, down) {
+                            width: 100%;
                             width: 100%;
                             position: relative;
                             left: auto;

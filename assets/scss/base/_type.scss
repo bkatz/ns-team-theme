@@ -8,7 +8,8 @@ h3,
 h4,
 h5,
 h6 {
-	@include flex-grid-column(12,0);
+	flex: 0 0 100%;
+	max-width: 100%;
 	color: $font-body;
 	margin: 1rem 0 0.5rem;
 
@@ -33,7 +34,7 @@ h6 {
 h1 {
 	font: 600 2.5rem/1.15 $font-primary;
 
-	@include breakpoint(small down) {
+	@include breakpoint(small, down) {
 		font-size: 2rem;
 	}
 
@@ -42,7 +43,7 @@ h1 {
 h2 {
 	font: 600 2rem/1.15 $font-primary;
 
-	@include breakpoint(small down) {
+	@include breakpoint(small, down) {
 		font-size: 1.5rem;
 	}
 
@@ -51,7 +52,7 @@ h2 {
 h3 {
 	font: 600 1.66rem/1.15 $font-primary;
 
-	@include breakpoint(small down) {
+	@include breakpoint(small, down) {
 		font-size: 1.33rem;
 	}
 
@@ -95,7 +96,8 @@ ol {
 }
 
 p {
-	@include flex-grid-column(12,0);
+	flex: 0 0 100%;
+	max-width: 100%;
 	font: 400 1.1rem/1.6 $font-secondary;
 	color: $font-body;
 	margin: 0 0 1rem 0;

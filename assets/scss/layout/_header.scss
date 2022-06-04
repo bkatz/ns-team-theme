@@ -2,9 +2,13 @@ $menu-button-color: $color-f;
 $menu-background-color: rgba($color-a, 0.975);
 
 .header {
-	@include flex;
-	@include flex-grid-row(null, $grid-row-full);
-	@include flex-align(left);
+	display: flex;
+	display: flex;
+max-width: 100%;
+margin-right: auto;
+margin-left: auto;
+flex-flow: row wrap;
+	justify-content: flex-start;
 	background: $color-a;
 	padding: 0;
 	position: relative;

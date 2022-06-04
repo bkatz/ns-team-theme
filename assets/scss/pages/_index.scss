@@ -5,10 +5,15 @@ body.archive {
     .page-wrap {
 
         & > .container {
-            @include flex-grid-row(null,$grid-row-width,12);
+            display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
             max-width: 50rem;
 
-            @include breakpoint(small down) {
+            @include breakpoint(small, down) {
                 max-width: 100%;
             }
 
@@ -17,11 +22,16 @@ body.archive {
     } // .page-wrap
 
     .content-area {
-        @include flex-grid-row(null,$grid-row-width,12);
-        @include flex-grid-column(12,0);
+        display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
+        width: 100%;
 
-        @include breakpoint(small down) {
-            @include flex-grid-column(12,0);
+        @include breakpoint(small, down) {
+            width: 100%;
             padding-top: 1.5rem;
         }
 
@@ -42,8 +52,13 @@ body.archive {
 
     // Post
     .post {
-        @include flex-grid-row(null,$grid-row-width,12);
-        @include flex-grid-column(12,0);
+        display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
+        width: 100%;
         margin: 0 auto;
         background: $color-f;
         border-bottom: 1px solid #F0F0F0;
@@ -56,11 +71,11 @@ body.archive {
     }
 
     .post__body {
-        @include flex-grid-column(12,0);
+        width: 100%;
     } // .post__body
 
     .post__image {
-        @include flex-grid-column(12,0);
+        width: 100%;
 
         img {
             max-width: 100%;
@@ -73,7 +88,7 @@ body.archive {
     // .post__image
 
     .post__title {
-        @include flex-grid-column(12,0);
+        width: 100%;
         margin: 1rem 0 1rem;
         transition: all 0.25s ease;
         color: $font-body;
@@ -94,7 +109,7 @@ body.archive {
     } // .post__meta
 
     .post__content {
-        @include flex-grid-column(12,0);
+        width: 100%;
         margin-top: 0.25rem;
 
         p {
@@ -106,7 +121,7 @@ body.archive {
     // .post__content
 
     .post__link {
-        @include flex-grid-column(12,0);
+        width: 100%;
         padding: 0;
 
         a {

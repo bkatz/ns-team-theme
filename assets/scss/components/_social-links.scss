@@ -1,12 +1,12 @@
 .social-links {
-	@include flex-grid-column(12,0);
+	width: 100%;
 	position: relative;
 	padding: 0;
 
 	&.social-links--show-names {
 
 		.social-link {
-		    @include flex-grid-column(12,0);
+		    width: 100%;
 		    display: block;
 		    padding-bottom: 1rem;
 
@@ -25,14 +25,19 @@
 	    margin: 0 1rem 0 0;
 
 	    & > a {
-	        @include flex-grid-row(null,$grid-row-width,12);
+	        display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
 	    } // & > a
 
 	}
 	// .social-link
 
 	.social-link__icon {
-		@include flex-align-self(middle);
+		align-self: center;
     	height: 22px;
     	width: auto;
 
@@ -43,7 +48,7 @@
 	} // .social-link__icon
 
 	.social-link__name {
-		@include flex-align-self(middle);
+		align-self: center;
 		font: 400 0.9rem/1 $font-secondary;
 		padding-left: 0.75rem;
 	} // .social-link__name

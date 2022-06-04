@@ -5,12 +5,20 @@
 		padding: 0.75rem 0;
 
 	    & > .container {
-	        @include flex-grid-row(null,$grid-row-width,12);
+	        display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
 	    } // & > .container
 
 	    .menu {
-			@include flex-grid-column(10,0);
-			@include flex-align-self(middle);
+			flex: 0 0 83.3333%;
+max-width: 83.3333%;
+padding-right: 0;
+padding-left: 0;
+			align-self: center;
 	    } // .menu
 
         .top-nav {
@@ -21,7 +29,7 @@
         	text-align: right;
 
         	& > .menu-item {
-				@include flex-align-self(middle);
+				align-self: center;
 				position: relative;
 				display: inline-block;
 				margin: 0 0.5em;

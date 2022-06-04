@@ -1,8 +1,8 @@
 @import "../../node_modules/normalize.scss/normalize.scss";
-@import '../../node_modules/foundation-sites/scss/util/util';
+// @import '../../node_modules/foundation-sites/scss/util/util';
 @import 'settings';
-@import '../../node_modules/foundation-sites/scss/foundation';
-@include foundation-flex-grid;
+// @import '../../node_modules/foundation-sites/scss/foundation';
+// @include foundation-flex-grid;
 // @include foundation-flex-classes;
 
 @import 'base/all';
@@ -23,7 +23,12 @@
 /*
 *
 * @include flex-grid-row($behavior, $size, $columns, $base, $wrap, $gutters)
-* @include flex-grid-row(null,$grid-row-width,12);  // Creates flexbox container
+* display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;  // Creates flexbox container
 *
 * Creates a container for a flex grid row.
 * $behavior: Modifications to the default grid styles. nest indicates the row will be placed inside another row. collapse indicates that the columns inside this row will not have padding. nest collapse combines both behaviors.
@@ -37,7 +42,7 @@
 /*
 *
 * @include flex-grid-column($columns, $gutters);
-* @include flex-grid-column(12,0);
+* width: 100%;
 *
 * Defines the flexbox column width.
 * $columns: Width of the column. Refer to the flex-grid-column() function to see possible values.
@@ -46,14 +51,14 @@
 
 /*
 *
-* @include flex;
+* display: flex;
 *
 * Enables flexbox by adding display: flex to the element.
 */
 
 /*
 *
-* @include flex-align-self(middle);
+* align-self: center;
 *
 * Vertically align a single column within a flex row. Apply this mixin to a flex column.
 * Can be top, bottom, middle, or stretch. Or, set it to null (the default) to not set vertical alignment.

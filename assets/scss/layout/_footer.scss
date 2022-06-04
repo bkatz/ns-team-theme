@@ -4,7 +4,10 @@
 }
 
 .footer__column {
-	@include flex-grid-column(3,0);
+	flex: 0 0 25%;
+max-width: 25%;
+padding-right: 0;
+padding-left: 0;
 
 	&.footer__column--one {
 	} // &.footer__column--one
@@ -25,7 +28,7 @@
     padding: 3rem 0;
 
     & > .container {
-        @extend .is-flex;
+        
     } // & > .container
 
 } // .footer__top
@@ -35,7 +38,7 @@
 	padding: 1.5rem 0;
 
 	& > .container {
-	    @extend .is-flex;
+	    
 	    justify-content: center;
 	    text-align: center;
 	} // & > .container

@@ -3,15 +3,19 @@
     position: relative;
 
     & > .container {
-        @include flex-grid-row(null,$grid-row-width,12);
-        @include flex-grid-column(12,0);
+        display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
+        width: 100%;
         position: relative;
         margin: 2.5em auto 0;
         padding: 2.5rem 4rem;
         background: #FBFBFB;
 
-        @include breakpoint(small down) {
-            @include flex-grid-column(12,0);
+        @include breakpoint(small, down) {
             width: 100%;
             padding: 1rem 0 2rem;
             padding-left: calc((100% / 12) * 0.75);
@@ -24,12 +28,17 @@
 
 .comments__list,
 .comment-list {
-    @include flex-grid-row(null,$grid-row-width,12);
-    @include flex-grid-column(12,0);
+    display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
+    width: 100%;
 } // .comments__list
 
 .comment {
-    @include flex-grid-column(12,0);
+    width: 100%;
     list-style: none;
 
     & > .children {
@@ -44,17 +53,27 @@
 } // .comment
 
 .comment__body {
-    @include flex-grid-row(null,$grid-row-width,12);
-    @include flex-grid-column(12,0);
+    display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
+    width: 100%;
 } // .comment__body
 
 .comment__author {
-    @include flex-grid-row(null,$grid-row-width,12);
+    display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
     margin: 0 1rem 0 0;
 } // .comment__author
 
 .comment__author-avatar {
-    @include flex-align-self(middle);
+    align-self: center;
     width: 50px;
     height: 50px;
     margin-right: 1rem;
@@ -70,12 +89,17 @@
 } // .comment__author-avatar
 
 .comment__author-details {
-    @include flex-grid-row(null,$grid-row-width,12);
-    @include flex-align-self(middle);
+    display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
+    align-self: center;
 } // .comment__author-datails
 
 .comment__author-name {
-    @include flex-grid-column(12,0);
+    width: 100%;
     font: 400 1.2rem/1.5 $font-primary;
 
     a {
@@ -85,7 +109,7 @@
 } // .comment__author-name
 
 .comment__meta {
-    @include flex-grid-column(12,0);
+    width: 100%;
     font: 400 0.7rem/1.25 $font-secondary;
 
     a {
@@ -96,15 +120,25 @@
 
 
 .comment__bottom {
-    @include flex-grid-row(null,$grid-row-width,12);
-    @include flex-grid-column(12,0);
+    display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
+    width: 100%;
     padding: 1rem 0 1rem;
     border-bottom: 1px solid rgba(0,0,0,0.1);
     margin: 0 0 2rem;
 } // .comment__bottom
 
 .comment__interactions {
-    @include flex-grid-row(null,$grid-row-width,12);
+    display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
     position: relative;
     width: 100%;
     margin-top: 1.5rem;
@@ -125,25 +159,35 @@
     } // .reply,
 
     .reply {
-        @include flex-grid-row(null,$grid-row-width,12);
-        @include flex-align-self(middle);
+        display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
+        align-self: center;
         margin: 0;
         margin-right: 2rem;
 
         svg {
-            @include flex-align-self(middle);
+            align-self: center;
             width: 22px;
             height: auto;
             margin-right: 0.25rem;
         } // svg
 
         a {
-            @include flex-align-self(middle);
+            align-self: center;
         } // a
     } // .reply
 
     .like {
-        @include flex-grid-row(null,$grid-row-width,12);
+        display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
         justify-content: flex-start;
         margin: 0;
         padding: 0;
@@ -156,17 +200,17 @@
         } // &.is-active
 
         .count {
-            @include flex-align-self(middle);
+            align-self: center;
             font: 600 0.625rem/1 $font-primary;
             text-transform: uppercase;
-            @include flex-align-self(middle);
+            align-self: center;
             margin-left: 0.25rem;
             color: black;
         }
 
 
         svg {
-            @include flex-align-self(middle);
+            align-self: center;
             width: 22px;
             height: auto;
             margin-right: 0.25rem;
@@ -175,20 +219,25 @@
     } // .likes
 
     .likes {
-        @include flex-grid-row(null,$grid-row-width,12);
+        display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
         position: absolute;
         right: 0;
         top: 0;
 
         .count {
-            @include flex-align-self(middle);
+            align-self: center;
             font: 600 0.625rem/1 $font-primary;
             margin-right: 0.65rem;
             color: black;
         }
 
         svg {
-            @include flex-align-self(middle);
+            align-self: center;
             width: 22px;
             height: auto;
             margin-right: 0.25rem;
@@ -199,21 +248,37 @@
 } // .comment__interactions
 
 .comment-respond {
-    @include flex-grid-row(null,$grid-row-width,12);
-    @include flex-grid-column(12,0);
+    display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
+    width: 100%;
 } // .comment-respond
 
 .comments__form {
-    @include flex-grid-row(null,$grid-row-width,12);
-    @include flex-grid-column(12,0);
+    display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
+    width: 100%;
 
     .input-name {
-        @include flex-grid-column(6,0);
+flex: 0 0 50%;
+max-width: 50%;
+padding-right: 0;
+padding-left: 0;
         padding-right: 0.25rem;
     } // .input-name
 
     .input-email {
-        @include flex-grid-column(6,0);
+        flex: 0 0 50%;
+max-width: 50%;
+padding-right: 0;
+padding-left: 0;
         padding-left: 0.25rem;
     } // .input-email
 

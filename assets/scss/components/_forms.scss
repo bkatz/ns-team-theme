@@ -1,5 +1,10 @@
 form {
-	@include flex-grid-row(null,$grid-row-width,12);
+	display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
 
 	p {
 		margin: 0;

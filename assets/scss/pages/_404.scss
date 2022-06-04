@@ -7,15 +7,15 @@
 
         & > .container {
             @extend .container;
-            @extend .is-flex;
+            
         } // & > .contaienr
 
     }
     // .page-content
 
     .title {
-        @include flex-grid-column(12,0);
-        @include flex-align-self(middle);
+        width: 100%;
+        align-self: center;
         color: $color-a;
         text-align: center;
         margin: 0;
@@ -23,7 +23,7 @@
     // .title
 
     p {
-        @include flex-grid-column(12,0);
+        width: 100%;
         text-align: center;
     }
 

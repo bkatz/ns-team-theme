@@ -1,35 +1,27 @@
 /*
 * Containers
 */
-.is-flex {
-    @include flex-grid-row(null,$grid-row-width,12);
-    width: 100%;
-} // .is-flex
 
 .container {
 	max-width: $global-width;
 	width: 100%;
 	margin: 0 auto;
 
-	@include breakpoint(1300px down) {
+	@include breakpoint(1300px, down) {
 		width: calc(100% - 6rem);
 	}
 
-	@include breakpoint(large down) {
+	@include breakpoint(large, down) {
 		width: calc(100% - 6rem);
 	}
 
-	@include breakpoint(medium down) {
+	@include breakpoint(medium, down) {
 		width: calc(100% - 4rem);
 	}
 
-	@include breakpoint(small down) {
+	@include breakpoint(small, down) {
 		width: calc(100% - 3rem);
 	}
-
-	&.is-flex {
-	    @include flex-grid-row(null,$grid-row-width,12);
-	} // &.is-flex
 
 	&.is-large {
 	    max-width: 100%;

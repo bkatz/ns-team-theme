@@ -1,12 +1,17 @@
 .similar-posts {
-    @include flex-grid-row(null,$grid-row-width,12);
+    display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
     border-top: 1px solid #f2f2f2;
     border-bottom: 1px solid #f2f2f2;
     margin: 2.5em auto 0;
     padding: 1.5em 0;
 
     .similar-posts__title {
-    	@include flex-grid-column(12,0);
+    	width: 100%;
         text-transform: uppercase;
         font: 500 1rem $font-primary;
         letter-spacing: 0.1em;
@@ -16,7 +21,10 @@
     // .similar-posts__title
 
     .similar-post {
-        @include flex-grid-column(4,0);
+        flex: 0 0 33.3333%;
+max-width: 33.3333%;
+padding-right: 0;
+padding-left: 0;
 
         &:nth-of-type(1) {
         	.inner {
@@ -31,7 +39,12 @@
         }
 
         .inner {
-            @include flex-grid-row(null,$grid-row-width,12);
+            display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
             position: relative;
             padding: 0 2em;
         }

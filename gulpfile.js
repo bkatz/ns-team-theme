@@ -23,7 +23,7 @@ var onError = function( err ) {
 
 var PATHS = {
   sass: [
-    'node_modules/foundation-sites/scss/',
+    // 'node_modules/foundation-sites/scss/',
   ],
   javascript: [
 
@@ -35,7 +35,6 @@ var PATHS = {
     // 'node_modules/jarallax/dist/jarallax.min.js',
 
     // Node Modules
-    'node_modules/feather-icons/dist/feather.min.js', // Icons
     'node_modules/slick-carousel/slick/slick.js', // Carousels/Sliders
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js', // Fancybox
     'node_modules/js-cookie/src/js.cookie.js', // Cookies

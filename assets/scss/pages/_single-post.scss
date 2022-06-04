@@ -8,16 +8,24 @@
 	} // .page-wrap
 
 	.content-area {
-	    @include flex-grid-row(null,$grid-row-width,12);
+	    display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
 	    width: 100%;
 	    padding: 5rem 0 0;
 
 		&.has-sidebar {
-			@include flex-grid-column(8.5,0);
+			flex: 0 0 70.8333%;
+max-width: 70.8333%;
+padding-right: 0;
+padding-left: 0;
 			margin: 0;
 
 		    .post {
-		        @include flex-grid-column(12,0);
+		        width: 100%;
 		        margin: 0;
 		    } // .post__article
 
@@ -49,23 +57,31 @@
 	//END .page-header
 
 	.post {
-		@include flex-grid-row(null,$grid-row-width,12);
-		@include flex-grid-column(12,0);
+		display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
+		width: 100%;
 		margin: 0 auto;
 		align-items: flex-start;
 
-		@include breakpoint(small down) {
-			@include flex-grid-column(12,0);
+		@include breakpoint(small, down) {
+			width: 100%;
 		}
 
 	} // .post
 
 	.post__body {
-	    @include flex-grid-column(11,0);
+	    flex: 0 0 91.6666%;
+max-width: 91.6666%;
+padding-right: 0;
+padding-left: 0;
 	    padding-right: 4rem;
 
-	    @include breakpoint(small down) {
-	    	@include flex-grid-column(12,0);
+	    @include breakpoint(small, down) {
+	    	width: 100%;
 	    	order: 0;
 	    }
 
@@ -73,18 +89,24 @@
 
 	.post__share {
 		// assets/scss/components/_post-share.scss
-		@include flex-grid-column(1,0);
+		flex: 0 0 8.3333%;
+max-width: 8.3333%;
+padding-right: 0;
+padding-left: 0;
 
-		@include breakpoint(small down) {
+		@include breakpoint(small, down) {
 			order: 1;
-			@include flex-grid-column(10.5,0);
+			flex: 0 0 87.5%;
+max-width: 87.5%;
+padding-right: 0;
+padding-left: 0;
 			margin: 1rem auto 0;
 		}
 
 	} // .post__share
 
 	.post__image {
-	    @include flex-grid-column(12,0);
+	    width: 100%;
 
 	    img {
 	    	display: block;
@@ -100,21 +122,27 @@
 	} // .post__meta
 
 	.post__title {
-	    @include flex-grid-column(12,0);
+	    width: 100%;
 	    margin: 1rem 0 1rem;
 
-	    @include breakpoint(small down) {
-	    	@include flex-grid-column(10.5,0);
+	    @include breakpoint(small, down) {
+	    	flex: 0 0 87.5%;
+max-width: 87.5%;
+padding-right: 0;
+padding-left: 0;
 	    	margin: 1rem auto 1rem;
 	    }
 
 	} // .post__title
 
 	.post__content {
-	    @include flex-grid-column(12,0);
+	    width: 100%;
 
-	    @include breakpoint(small down) {
-	    	@include flex-grid-column(10.5,0);
+	    @include breakpoint(small, down) {
+	    	flex: 0 0 87.5%;
+max-width: 87.5%;
+padding-right: 0;
+padding-left: 0;
 	    	margin: 0 auto;
 	    }
 

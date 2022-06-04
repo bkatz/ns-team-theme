@@ -1,6 +1,11 @@
 .pagination {
-    @include flex-grid-row(null,$grid-row-width,12);
-    @include flex-grid-column(12,0);
+    display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
+    width: 100%;
     justify-content: center;
     text-align: center;
     padding: 1rem 0;
@@ -21,13 +26,18 @@
 
         &.next,
         &.prev {
-            @include flex-grid-row(null,$grid-row-width,12);
-            @include flex-align-self(middle);
+            display: flex;
+flex-flow: row wrap;
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
+            align-self: center;
             width: 50px;
             margin: 0;
 
             svg {
-                @include flex-align-self(middle);
+                align-self: center;
             } // svg
         }
 
