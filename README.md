@@ -2,11 +2,11 @@
 ## Git
 ```bash
 $ cd my-wordpress-folder/wp-content/themes/
-$ git clone git@github.com:bkatz/starter.git
+$ git clone git@github.com:bkatz/starter-bkc.git
 $ cd starter
 $ git push --mirror git@github.com:bkatz/NEWREPOSITORYNAME.git
 $ cd ..
-$ rm -rf starter
+$ rm -rf starter-bkc
 $ git clone git@github.com:bkatz/NEWREPOSITORYNAME.git
 $ cd NEWTHEME
 $ git init
