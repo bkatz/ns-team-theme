@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Get the search overlay.
  */
@@ -11,10 +12,10 @@
 	/**
 	 * Notifications (Top).
 	 */
-	get_template_part( 'partials/components/notifications/notifications-sticky-bar', 'top' );
+	get_template_part('partials/components/notifications/notifications-sticky-bar', 'top');
 	?>
 
-	<?php if ( has_nav_menu( 'wpst-nav-top' ) ) : ?>
+	<?php if (has_nav_menu('wpst-nav-top')) : ?>
 
 		<div class="header__top">
 			<div class="container is-flex">
@@ -24,30 +25,34 @@
 
 	<?php endif; ?>
 
-	<?php if ( has_nav_menu( 'wpst-nav-main' ) ) : ?>
+	<?php if (has_nav_menu('wpst-nav-main')) : ?>
 
 		<div class="header__bottom">
 
-			<div class="container is-flex">
+			<div class="container">
 
-				<?php $wpst_logo_id = get_option( 'options_logo' ); ?>
+				<div class="header__navigation">
 
-				<?php if ( ! empty( $wpst_logo_id ) ) : ?>
-					<div itemscope itemtype="https://schema.org/Organization" class="header__logo" >
-						<a itemprop="url" href="<?php echo esc_url(home_url()); ?>">
-							<?php echo wp_get_attachment_image( $wpst_logo_id, 'large', false, array( 'alt' => get_bloginfo( 'name' ) . ' Logo', 'itemprop' => 'logo' ) ); ?>
-						</a>
-					</div>
-				<?php endif; ?>
+					<?php $wpst_logo_id = get_option('options_logo'); ?>
 
-				<nav role="navigation" class="header__menu header__menu--bottom">
-					<?php wpst_main_menu(); ?>
+					<?php if (!empty($wpst_logo_id)) : ?>
+						<div itemscope itemtype="https://schema.org/Organization" class="header__logo">
+							<a itemprop="url" href="<?php echo esc_url(home_url()); ?>">
+								<?php echo wp_get_attachment_image($wpst_logo_id, 'large', false, array('alt' => get_bloginfo('name') . ' Logo', 'itemprop' => 'logo')); ?>
+							</a>
+						</div>
+					<?php endif; ?>
 
-					<button class="menu-icon" type="button" area-label="main menu">
-						<span></span>
-					</button>
+					<nav role="navigation" class="header__menu header__menu--bottom">
+						<?php wpst_main_menu(); ?>
 
-				</nav><!-- .header__menu -->
+						<button class="menu-icon" type="button" area-label="main menu">
+							<span></span>
+						</button>
+
+					</nav><!-- .header__menu -->
+
+				</div>
 
 			</div>
 

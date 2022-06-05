@@ -3,158 +3,19 @@
     "title": "Button",
     "fields": [
         {
-            "key": "field_5e042136be8d2",
-            "label": "Button Type",
-            "name": "button_type",
-            "type": "select",
+            "key": "field_629bdfa755b78",
+            "label": "Button",
+            "name": "button",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "20",
+                "width": "",
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "normal": "Normal",
-                "scroll": "Scroll",
-                "page": "Page"
-            },
-            "default_value": [
-                "normal"
-            ],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
-            "key": "field_5e042127be8d1",
-            "label": "Button Text",
-            "name": "button_text",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "20",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5e04216ebe8d3",
-            "label": "Button Link",
-            "name": "button_link",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5e042136be8d2",
-                        "operator": "!=",
-                        "value": "page"
-                    },
-                    {
-                        "field": "field_5e042136be8d2",
-                        "operator": "!=",
-                        "value": "scroll"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "20",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5e042189be8d4",
-            "label": "Button Scroll ID",
-            "name": "button_scroll_id",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5e042136be8d2",
-                        "operator": "==",
-                        "value": "scroll"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "20",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5e04219ebe8d5",
-            "label": "Button Page",
-            "name": "button_page",
-            "type": "page_link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5e042136be8d2",
-                        "operator": "==",
-                        "value": "page"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "20",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [
-                "page"
-            ],
-            "taxonomy": "",
-            "allow_null": 0,
-            "allow_archives": 0,
-            "multiple": 0
-        },
-        {
-            "key": "field_5e0566567304e",
-            "label": "New Tab",
-            "name": "button_target",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "20",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "return_format": "array"
         }
     ],
     "location": [
@@ -174,5 +35,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1577412225
+    "modified": 1654382600
 }

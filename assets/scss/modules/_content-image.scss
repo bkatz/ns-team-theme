@@ -1,0 +1,28 @@
+.content-image {
+    padding: rem-calc(80) 0;
+}
+
+.content-image__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: rem-calc(50);
+    @include breakpoint(medium, down) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: rem-calc(24);
+    }
+}
+
+.content-image__content {
+    
+    p {
+    }
+}
+
+.content-image__image {
+    img {
+        width: 100%;
+        height: auto;
+    }
+}

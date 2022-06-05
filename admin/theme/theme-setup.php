@@ -170,7 +170,7 @@ function wpst_browser_classes($classes)
 {
     // the list of WordPress global browser checks
     // https://codex.wordpress.org/Global_Variables#Browser_Detection_Booleans
-    $browsers = ['is_iphone', 'is_chrome', 'is_safari', 'is_NS4', 'is_opera', 'is_macIE', 'is_winIE', 'is_gecko', 'is_lynx', 'is_IE', 'is_edge', 'is_ipad'];
+    $browsers = ['is_iphone', 'is_chrome', 'is_safari', 'is_NS4', 'is_opera', 'is_macIE', 'is_winIE', 'is_gecko', 'is_lynx', 'is_IE', 'is_edge'];
 
     // check the globals to see if the browser is in there and return a string with the match
     $classes[] = join(' ', array_filter($browsers, function ($browser) {
@@ -187,9 +187,9 @@ add_filter('body_class', 'wpst_browser_classes');
  * CHANGE DEFAULT FOOTER TEXT
  */
 function wpst_footer_admin() {
-  echo '<span style="text-transform: uppercase; font-size: 0.85em; letter-spacing: 0.2em;">Theme developed by <a style="text-decoration: none;font-weight: bold; color:#555;" target="_blank" href="http://dylandunlop.com">Dylan Dunlop</a></span>';
+  echo '<span style="text-transform: uppercase; font-size: 0.85em; letter-spacing: 0.2em;">Theme developed by <a style="text-decoration: none;font-weight: bold; color:#555;" target="_blank" href="https://bkcreative.co">BKCreative</a></span>';
 }
-// add_filter( 'admin_footer_text', 'wpst_footer_admin' );
+add_filter( 'admin_footer_text', 'wpst_footer_admin' );
 
 /**
  * Add widget title to widget class name.

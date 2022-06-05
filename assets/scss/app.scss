@@ -1,10 +1,7 @@
-@import "../../node_modules/normalize.scss/normalize.scss";
-// @import '../../node_modules/foundation-sites/scss/util/util';
-@import 'settings';
-// @import '../../node_modules/foundation-sites/scss/foundation';
-// @include foundation-flex-grid;
-// @include foundation-flex-classes;
 
+@import "../../node_modules/normalize.scss/normalize.scss";
+@import 'foundation';
+@import 'settings';
 @import 'base/all';
 @import 'components/all';
 @import 'layout/all';

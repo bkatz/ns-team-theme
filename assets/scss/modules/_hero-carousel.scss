@@ -1,9 +1,9 @@
 .hero {
 	display: flex;
-max-width: 100%;
-margin-right: auto;
-margin-left: auto;
-flex-flow: row wrap;
+	max-width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	flex-flow: row wrap;
 	display: block;
 	position: relative;
 	padding: 0;
@@ -55,12 +55,12 @@ flex-flow: row wrap;
 
 	& > .container {
 		display: flex;
-flex-flow: row wrap;
-flex: 0 0 100%;
-max-width: 100%;
-padding-right: 0;
-padding-left: 0;
+		flex-flow: row wrap;
+		flex: 0 0 100%;
+		padding-right: 0;
+		padding-left: 0;
 		height: 100%;
+		margin: 0 auto;
 		position: relative;
 
 		@include breakpoint(medium, down) {
@@ -83,28 +83,39 @@ padding-left: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	@include linear-gradient(to right, $black 0%, $black 100%);
-	opacity: 0.33;
+	@include linear-gradient(to right, $black 100%, $black 100%);
+	opacity: 0.55;
 	z-index: 2;
+}
+
+.hero-item__background {
+	@include foursides(1);
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center center;
+	}
 }
 
 .hero-item__content {
 	flex: 0 0 66.6666%;
-max-width: 66.6666%;
-padding-right: 0;
-padding-left: 0;
+	max-width: 66.6666%;
+	padding-right: 0;
+	padding-left: 0;
 	align-self: center;
+	margin: 0 auto;
 	position: relative;
 	z-index: 3;
 	color: $white;
-	// padding: 12rem 0;
 	transition: all 0.5s ease-out 0.1s;
+	text-align: center;
 
 	@include breakpoint(large, down) {
 		flex: 0 0 83.3333%;
-max-width: 83.3333%;
-padding-right: 0;
-padding-left: 0;
+		max-width: 83.3333%;
+		padding-right: 0;
+		padding-left: 0;
 	}
 
 	@include breakpoint(medium, down) {
@@ -113,7 +124,6 @@ padding-left: 0;
 
 	@include breakpoint(small, down) {
 		padding: 5rem 0;
-		text-align: center;
 	}
 
 }
@@ -125,9 +135,8 @@ padding-left: 0;
 	position: relative;
 	font: 700 4.25rem/1 $font-primary;
 	letter-spacing: 0;
-	margin: 0 0 0;
+	margin: 0;
 	padding: 0;
-	text-align: left;
 
 	@include breakpoint(medium, down) {
 		font-size: 3.5rem;
@@ -142,12 +151,9 @@ padding-left: 0;
 
 .hero-item__description {
 	width: 100%;
-
 	p {
-		flex: 0 0 83.3333%;
-max-width: 83.3333%;
-padding-right: 0;
-padding-left: 0;
+		padding-right: 0;
+		padding-left: 0;
 		color: white;
 		font: 400 1.5rem $font-secondary;
 		line-height: 1.5;
@@ -158,7 +164,6 @@ padding-left: 0;
 		}
 
 		@include breakpoint(small, down) {
-			text-align: center;
 		}
 
 	}

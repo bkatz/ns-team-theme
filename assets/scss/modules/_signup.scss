@@ -1,0 +1,31 @@
+.signup {
+    background: $color-a;
+    padding: 4rem 0;
+    & > .container {
+        max-width: rem-calc(750);
+    }
+    h2 {
+        color: $white;
+        text-align: center;
+        font-size: 2.5rem;
+        font-style: italic;
+        max-width: rem-calc(465);
+        margin: 0 auto 3rem;
+    }
+    p {
+        color: $white;
+        text-align: center;
+    }
+    a {
+        color: $white;
+        text-decoration: underline;
+        text-decoration-color: rgba($white, .5);
+        transition: all .25s ease;
+        &:hover {
+            text-decoration-color: rgba($white, 1);
+        }
+    }
+    label {
+        color: $white;
+    }
+}
