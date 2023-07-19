@@ -35,7 +35,6 @@ function wpst_acf_settings_dir( $dir ) {
 }
 add_filter( 'acf/settings/dir', 'wpst_acf_settings_dir' );
 
-
 /**
   * Save JSON files when fields are created/updated
   */
@@ -76,7 +75,7 @@ function wpst_acf_hide_acf_admin() {
 
     // an array of protected site urls
     $valid_urls = array(
-        'https://str.local',
+        'https://str.test',
     );
 
     // check if the current site url is in the valid urls array

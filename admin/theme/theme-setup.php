@@ -261,3 +261,11 @@ function wpst_login_logo(){
     return esc_url( site_url() );
 }
 add_filter('login_headerurl', 'wpst_login_logo');
+
+
+/**
+ * Move Yoast to bottom
+ */
+add_filter('wpseo_metabox_prio', function () {
+    return 'low';
+});
