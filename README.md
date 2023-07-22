@@ -3,7 +3,7 @@
 ```bash
 $ cd my-wordpress-folder/wp-content/themes/
 $ git clone git@github.com:bkatz/starter-bkc.git
-$ cd starter
+$ cd starter-bkc
 $ git push --mirror git@github.com:bkatz/NEWREPOSITORYNAME.git
 $ cd ..
 $ rm -rf starter-bkc
