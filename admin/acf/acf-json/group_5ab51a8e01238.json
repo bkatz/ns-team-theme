@@ -6,6 +6,7 @@
             "key": "field_5ab51b6b1106a",
             "label": "Page Modules",
             "name": "enable_modules",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "Enable page modules to create a dynamic layout.",
             "required": 0,
@@ -25,6 +26,7 @@
             "key": "field_5ab51ace0ae17",
             "label": "Modules",
             "name": "modules",
+            "aria-label": "",
             "type": "flexible_content",
             "instructions": "Use modules to create the page layout.",
             "required": 0,
@@ -53,6 +55,7 @@
                             "key": "field_5ab51af80ae18",
                             "label": "Page Content",
                             "name": "",
+                            "aria-label": "",
                             "type": "message",
                             "instructions": "",
                             "required": 0,
@@ -77,47 +80,32 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5c1b164c639bc",
-                            "label": "Section ID",
-                            "name": "section_id",
-                            "type": "text",
+                            "key": "field_64fa224ae04d6",
+                            "label": "Section ID & Class",
+                            "name": "section_id_class",
+                            "aria-label": "",
+                            "type": "clone",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "",
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_5c1b1653639bd",
-                            "label": "Section Class",
-                            "name": "section_class",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
+                            "clone": [
+                                "group_64fa1ff40e025"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
                         },
                         {
                             "key": "field_5c1b165c639be",
                             "label": "Content",
                             "name": "content",
+                            "aria-label": "",
                             "type": "wysiwyg",
                             "instructions": "",
                             "required": 0,
@@ -147,6 +135,7 @@
                             "key": "field_5d7c6f445976c",
                             "label": "Section ID",
                             "name": "section_id",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -166,6 +155,7 @@
                             "key": "field_5d7c6f445976d",
                             "label": "Section Class",
                             "name": "section_class",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -185,6 +175,7 @@
                             "key": "field_5d7c6f7e5976f",
                             "label": "Settings",
                             "name": "",
+                            "aria-label": "",
                             "type": "accordion",
                             "instructions": "",
                             "required": 0,
@@ -202,6 +193,7 @@
                             "key": "field_5d7c6f9559770",
                             "label": "Autoplay",
                             "name": "settings_autoplay",
+                            "aria-label": "",
                             "type": "true_false",
                             "instructions": "",
                             "required": 0,
@@ -221,6 +213,7 @@
                             "key": "field_5d7c6fbc59771",
                             "label": "Autoplay Speed",
                             "name": "settings_autoplay_speed",
+                            "aria-label": "",
                             "type": "number",
                             "instructions": "",
                             "required": 0,
@@ -242,6 +235,7 @@
                             "key": "field_5d7c700259772",
                             "label": "Items",
                             "name": "",
+                            "aria-label": "",
                             "type": "accordion",
                             "instructions": "",
                             "required": 0,
@@ -259,6 +253,7 @@
                             "key": "field_5d7c701659773",
                             "label": "Carousel Items",
                             "name": "carousel_items",
+                            "aria-label": "",
                             "type": "flexible_content",
                             "instructions": "",
                             "required": 0,
@@ -279,6 +274,7 @@
                                             "key": "field_5d7c706759776",
                                             "label": "Image",
                                             "name": "image",
+                                            "aria-label": "",
                                             "type": "image",
                                             "instructions": "",
                                             "required": 0,
@@ -303,6 +299,7 @@
                                             "key": "field_5d7c703e59774",
                                             "label": "Title",
                                             "name": "title",
+                                            "aria-label": "",
                                             "type": "text",
                                             "instructions": "",
                                             "required": 0,
@@ -322,6 +319,7 @@
                                             "key": "field_5d7c705559775",
                                             "label": "Text",
                                             "name": "text",
+                                            "aria-label": "",
                                             "type": "textarea",
                                             "instructions": "",
                                             "required": 0,
@@ -341,6 +339,7 @@
                                             "key": "field_5e056378e34cc",
                                             "label": "Buttons",
                                             "name": "buttons",
+                                            "aria-label": "",
                                             "type": "repeater",
                                             "instructions": "",
                                             "required": 0,
@@ -354,12 +353,14 @@
                                             "min": 0,
                                             "max": 0,
                                             "layout": "table",
-                                            "button_label": "",
+                                            "button_label": "Add Row",
+                                            "rows_per_page": 20,
                                             "sub_fields": [
                                                 {
                                                     "key": "field_5e056388e34cd",
                                                     "label": "Button",
                                                     "name": "button",
+                                                    "aria-label": "",
                                                     "type": "clone",
                                                     "instructions": "",
                                                     "required": 0,
@@ -375,7 +376,8 @@
                                                     "display": "seamless",
                                                     "layout": "block",
                                                     "prefix_label": 0,
-                                                    "prefix_name": 0
+                                                    "prefix_name": 0,
+                                                    "parent_repeater": "field_5e056378e34cc"
                                                 }
                                             ]
                                         }
@@ -393,6 +395,7 @@
                                             "key": "field_5e0568ed1edf5",
                                             "label": "Title",
                                             "name": "title",
+                                            "aria-label": "",
                                             "type": "text",
                                             "instructions": "",
                                             "required": 0,
@@ -412,6 +415,7 @@
                                             "key": "field_5e0568ed1edf6",
                                             "label": "Text",
                                             "name": "text",
+                                            "aria-label": "",
                                             "type": "textarea",
                                             "instructions": "",
                                             "required": 0,
@@ -431,6 +435,7 @@
                                             "key": "field_5e0568ed1edf4",
                                             "label": "Image",
                                             "name": "image",
+                                            "aria-label": "",
                                             "type": "image",
                                             "instructions": "",
                                             "required": 0,
@@ -455,6 +460,7 @@
                                             "key": "field_5e05690f1edf9",
                                             "label": "Video",
                                             "name": "video",
+                                            "aria-label": "",
                                             "type": "oembed",
                                             "instructions": "",
                                             "required": 0,
@@ -471,6 +477,7 @@
                                             "key": "field_5e0568ed1edf7",
                                             "label": "Buttons",
                                             "name": "buttons",
+                                            "aria-label": "",
                                             "type": "repeater",
                                             "instructions": "",
                                             "required": 0,
@@ -484,12 +491,14 @@
                                             "min": 0,
                                             "max": 0,
                                             "layout": "table",
-                                            "button_label": "",
+                                            "button_label": "Add Row",
+                                            "rows_per_page": 20,
                                             "sub_fields": [
                                                 {
                                                     "key": "field_5e0568ed1edf8",
                                                     "label": "Button",
                                                     "name": "button",
+                                                    "aria-label": "",
                                                     "type": "clone",
                                                     "instructions": "",
                                                     "required": 0,
@@ -505,7 +514,8 @@
                                                     "display": "seamless",
                                                     "layout": "block",
                                                     "prefix_label": 0,
-                                                    "prefix_name": 0
+                                                    "prefix_name": 0,
+                                                    "parent_repeater": "field_5e0568ed1edf7"
                                                 }
                                             ]
                                         }
@@ -543,7 +553,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1654382667
+    "show_in_rest": 0,
+    "modified": 1694114458
 }

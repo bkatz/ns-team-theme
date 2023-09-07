@@ -13,28 +13,6 @@
 
 $site_name = get_bloginfo( 'title' );
 
-function wpst_acf_settings_path( $path ) {
-
-	// Update path.
-	$path = THEME_DIR . '/admin/acf/';
-
-	// Return.
-	return $path;
-
-}
-add_filter( 'acf/settings/path', 'wpst_acf_settings_path' );
-
-function wpst_acf_settings_dir( $dir ) {
-
-	// Update path.
-	$dir = THEME_URL . '/admin/acf/';
-
-	// Return.
-	return $dir;
-
-}
-add_filter( 'acf/settings/dir', 'wpst_acf_settings_dir' );
-
 /**
   * Save JSON files when fields are created/updated
   */
@@ -91,8 +69,8 @@ function wpst_acf_hide_acf_admin() {
 add_filter('acf/settings/show_admin', 'wpst_acf_hide_acf_admin');
 
 // Get the ACF Framework Files.
-include_once( THEME_DIR . '/admin/acf/acf.php' );
-include_once( THEME_DIR . '/admin/acf/acf-rgba-color-master/acf-rgba-color.php' );
+include_once( WP_PLUGIN_DIR . '/advanced-custom-fields-pro/acf.php' );
+// include_once( THEME_DIR . '/admin/acf/acf-rgba-color-master/acf-rgba-color.php' );
 
 // Register a Theme Options page.
 if ( function_exists( 'acf_add_options_page' ) ) {
