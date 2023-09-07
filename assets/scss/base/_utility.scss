@@ -4,7 +4,7 @@
 
 .container {
 	max-width: $global-width;
-	width: 100%;
+	width: calc(100% - 2rem);
 	margin: 0 auto;
 
 	@include breakpoint(1300px, down) {
@@ -23,10 +23,14 @@
 		width: calc(100% - 3rem);
 	}
 
+	&.is-small {
+		max-width: 800px;
+	} // &.is-small
+
 	&.is-large {
 	    max-width: 100%;
 	    width: calc(100% - 6.25rem);
-	} // &.is-full
+	} // &.is-large
 
 	&.is-full {
 	    width: 100%;

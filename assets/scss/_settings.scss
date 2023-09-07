@@ -28,7 +28,8 @@ $body-font-color: $font_body;
 $global-width: rem-calc(1200);
 
 $breakpoints: (
-  small: 0,
+  xsmall: 0,
+  small: 416px,
   medium: 768px,
   large: 1024px,
   xlarge: 1200px,

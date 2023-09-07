@@ -42,6 +42,12 @@ function wpst_add_scripts() {
     wp_enqueue_style( 'google_fonts', add_query_arg( $query_args, '//fonts.googleapis.com/css' ), array(), null );
 
     /**
+     * Typekit Fonts
+     * Change url to your typekit url.
+     */
+    // wp_enqueue_style('typestyle', 'https://use.typekit.net/aog6ddp.css');
+
+    /**
      * Main Javascript files
      */
     wp_register_script( 'app-js', THEME_URL . '/assets/js/min/app.min.js', array(), '', true );
@@ -66,8 +72,8 @@ function wpst_add_scripts() {
     /**
      * Remove default Gutenberg CSS files.
      */
-    wp_dequeue_style( 'wp-block-library' );
-    wp_dequeue_style( 'wp-block-library-theme' );
+    // wp_dequeue_style( 'wp-block-library' );
+    // wp_dequeue_style( 'wp-block-library-theme' );
 }
 add_action( 'wp_enqueue_scripts', 'wpst_add_scripts' );
 
@@ -88,3 +94,22 @@ function wpst_google_maps_api_key() {
     acf_update_setting( 'google_api_key', GOOGLE_API_KEY );
 }
 add_action('acf/init', 'wpst_google_maps_api_key');
+
+
+/**
+ * Populate ACF select field options with Gravity Forms forms
+ */
+// function acf_populate_gf_forms_ids($field) {
+//     if (class_exists('GFFormsModel')) {
+//         $choices = [];
+
+//         foreach (\GFFormsModel::get_forms() as $form) {
+//             $choices[$form->id] = $form->title;
+//         }
+
+//         $field['choices'] = $choices;
+//     }
+
+//     return $field;
+// }
+// add_filter('acf/load_field/name=gravity_form', 'acf_populate_gf_forms_ids');
