@@ -5,7 +5,7 @@
  *	This file contains the functionality necessary
  *	to integrate ACF custom fields with the theme.
  *
- *	@author Dylan Dunlop <dylan@dylandunlop.com>
+ *	@author Benjamin Katz
  *	@param string $path Path to the ACF directory.
  *  @package WordPress ACF
  *	@since 1.0
