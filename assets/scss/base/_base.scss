@@ -12,6 +12,7 @@ html {
 	body {
 		width: 100%;
 		display: block;
+		background: $body-background;
 
 		&.menu-is-open,
 		&.no-scroll {

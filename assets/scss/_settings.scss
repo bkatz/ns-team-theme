@@ -10,13 +10,13 @@ $font-secondary: 'Open Sans', helvetica, arial, sans-serif;
 $font-body: #333;
 
 // Brand Colors
-$color-a: #457CF2;
-$color-b: #8578F5;
+$color-a: #c73131;
+$color-b: #051761;
 $color-c: #4CCFA6;
 $color-d: #2A4D96;
 $color-e: #E9E9E9;
 $color-f: #FFFFFF;
-$color-g: #d8eef9;
+$color-g: #99abf0;
 
 // Basic Colors
 $white: #ffffff;
@@ -25,7 +25,7 @@ $black: #000000;
 $body-background: $white;
 $body-font-color: $font_body;
 
-$global-width: rem-calc(1200);
+$global-width: rem-calc(1400);
 
 $breakpoints: (
   xsmall: 0,

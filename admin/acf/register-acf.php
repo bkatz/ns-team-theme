@@ -53,7 +53,7 @@ function wpst_acf_hide_acf_admin() {
 
     // an array of protected site urls
     $valid_urls = array(
-        'https://str.test',
+        'https://nsll.test',
     );
 
     // check if the current site url is in the valid urls array

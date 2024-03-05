@@ -45,6 +45,76 @@
                 "id": ""
             },
             "layouts": {
+                "layout_65d7d48592483": {
+                    "key": "layout_65d7d48592483",
+                    "name": "player-info",
+                    "label": "Player Info",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_65d7d48592485",
+                            "label": "Section ID & Class",
+                            "name": "section_id_class",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_64fa1ff40e025"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_65d7d48592486",
+                            "label": "Content",
+                            "name": "content",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_65d7d4a692487",
+                            "label": "Adds player Info",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "This module will add all relevant info about the team.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "5ab51ad432264": {
                     "key": "5ab51ad432264",
                     "name": "page-content",
@@ -533,9 +603,9 @@
                     "max": ""
                 }
             },
-            "button_label": "Add Module",
             "min": "",
-            "max": ""
+            "max": "",
+            "button_label": "Add Module"
         }
     ],
     "location": [
@@ -556,5 +626,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1694114458
+    "modified": 1708643539
 }

@@ -1,0 +1,38 @@
+.player-info, .player {
+    .player__content {
+        margin-bottom: 4rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    .player-info__data {
+        th, td {
+            padding: 8px;
+            text-align: right;
+            font-size: .8rem;
+            &.highlighted {
+                background-color: #e2efe2;
+            }
+        }
+        th {
+            cursor: pointer;
+            background-color: #f2f2f2;
+            &.highlighted {
+                background-color: #cde9cd;
+            }
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+            td.highlighted {
+                background-color: #cde9cd;
+            }
+        }
+    }
+}
+
+.player {
+    
+    .notes {
+        max-width: 400px;
+    }
+}
